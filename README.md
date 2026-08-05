@@ -14,7 +14,7 @@
 
 ## About Me
 
-I'm **Lem Acovera**, a developing **Full Stack Developer** with experience building web, mobile, administrative, e-commerce, healthcare, and government-related systems. I work across the entire development process—from interface design and backend logic to databases, authentication, deployment, and documentation.
+I'm **Luis Mario Acovera**, a developing **Full Stack Developer** with experience building web, mobile, administrative, e-commerce, healthcare, and government-related systems. I work across the entire development process—from interface design and backend logic to databases, authentication, deployment, and documentation.
 
 My work isn't limited to simple demo websites. I focus on building practical systems that solve real organizational and community problems, including account management, dashboards, workflows, communication features, document processing, appointment scheduling, order tracking, AI assistance, and real-time updates.
 
