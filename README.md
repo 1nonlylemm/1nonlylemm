@@ -1,8 +1,6 @@
 <div align="center">
 
-<h1>Luis Mario Acovera</h1>
-
-<h3>Full Stack Developer</h3>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=080D16&height=140&text=Luis%20Mario%20Acovera&fontSize=38&fontColor=FFFFFF&fontAlign=50&fontAlignY=42&fontFamily=Syne&desc=Full%20Stack%20Developer&descSize=16&descColor=8DA9C4&descAlign=50&descAlignY=68" alt="Luis Mario Acovera - Full Stack Developer" width="100%">
 
 <p>
   <img src="https://img.shields.io/badge/Experience-2%2B%20Years-111927?style=flat-square&labelColor=080D16" alt="Experience">
