@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250" role="img" aria-labelledby="title desc">
+  <title id="title">Luis Mario Acovera — Full Stack Developer</title>
+  <desc id="desc">Centered profile banner with Design, Develop, Deploy and career highlights.</desc>
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101a29"/>
+      <stop offset="1" stop-color="#0b111b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="250" rx="18" fill="url(#base)"/>
+  <path d="M895 0h305v250H770z" fill="#0a0f17" opacity=".74"/>
+  <rect x="1" y="1" width="1198" height="248" rx="17" fill="none" stroke="#263243" stroke-width="2"/>
+  <g text-anchor="middle" font-family="Arial, Helvetica, sans-serif">
+    <text x="600" y="48" fill="#9aabc0" font-size="13" letter-spacing="3">DESIGN · DEVELOP · DEPLOY</text>
+    <text x="600" y="101" fill="#f4f7fb" font-size="42" font-weight="700" letter-spacing="-1.2">Luis Mario Acovera</text>
+    <text x="600" y="135" fill="#d4deea" font-size="19" font-weight="600">Full Stack Developer</text>
+    <text x="600" y="174" fill="#9aabc0" font-size="14">2+ years building  ·  15+ projects  ·  100+ users served</text>
+  </g>
+</svg>

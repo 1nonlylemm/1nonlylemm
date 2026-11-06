@@ -1,348 +1,137 @@
 <div align="center">
 
-
-
-\# Lem Acovera
-
-
-
-\### Full Stack Developer
-
-
-
-!\[Experience](https://img.shields.io/badge/Experience-2%2B%20Years-111927?style=flat-square\&labelColor=080D16)
-
-!\[Projects](https://img.shields.io/badge/Projects-15%2B-111927?style=flat-square\&labelColor=080D16)
-
-!\[Users Served](https://img.shields.io/badge/Users%20Served-100%2B-111927?style=flat-square\&labelColor=080D16)
-
-
+<img src="assets/banner.svg" alt="Luis Mario Acovera · Full Stack Developer · Design, Develop, Deploy · 2+ years · 15+ projects · 100+ users served" width="100%">
 
 </div>
 
+---
 
+## About Me
 
-\---
+I’m a full-stack developer and Information Technology student based in Santa Cruz, Laguna, Philippines. I build web and mobile applications, administrative tools, and business systems, taking projects from interface design and data modeling through implementation, testing, and deployment.
 
+My work includes e-commerce and small-business websites, management dashboards, civic and document workflows, appointment tools, and AI-assisted features. I enjoy turning practical needs into clear, maintainable software and continuing to learn from each project.
 
+## Areas of Hands-On Experience
 
-\## About Me
+- **Frontend:** responsive interfaces, reusable components, interactive experiences, and accessibility-minded layouts
+- **Backend:** REST APIs, server-side application logic, form handling, and third-party service integrations
+- **Data and access:** relational database design, authentication, role-based access, and record-management workflows
+- **Business systems:** dashboards, document requests, approvals, scheduling, order flows, and reporting
+- **Mobile:** cross-platform app development with Flutter and Dart
+- **Delivery:** Git-based collaboration, deployment, media handling, and browser-based testing
+- **PC hardware:** PC assembly, component compatibility, upgrades, troubleshooting, and basic Windows/driver maintenance
 
+## Technology Stack
 
+### Frontend and UI
 
-I'm \*\*Lem Acovera\*\*, a developing \*\*Full Stack Developer\*\* with experience building web, mobile, administrative, e-commerce, healthcare, and government-related systems. I work across the entire development process — interface design, backend logic, databases, authentication, deployment, and documentation.
+<p>
+  <img src="https://cdn.simpleicons.org/html5/E34F26" height="28" alt="HTML5"> <sub>HTML5</sub> &nbsp;
+  <img src="assets/icons/css3.svg" height="28" alt="CSS3"> <sub>CSS3</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/javascript/F7DF1E" height="28" alt="JavaScript"> <sub>JavaScript</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/typescript/3178C6" height="28" alt="TypeScript"> <sub>TypeScript</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/react/61DAFB" height="28" alt="React"> <sub>React</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" height="28" alt="Next.js"> <sub>Next.js</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/vite/646CFF" height="28" alt="Vite"> <sub>Vite</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/tailwindcss/38BDF8" height="28" alt="Tailwind CSS"> <sub>Tailwind CSS</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/bootstrap/7952B3" height="28" alt="Bootstrap"> <sub>Bootstrap</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/gsap/88CE02" height="28" alt="GSAP"> <sub>GSAP</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/threedotjs/FFFFFF" height="28" alt="Three.js"> <sub>Three.js</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/reactrouter/CA4245" height="28" alt="React Router"> <sub>React Router</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/lucide/F56565" height="28" alt="Lucide"> <sub>Lucide</sub>
+</p>
 
+### Backend and APIs
 
+<p>
+  <img src="https://cdn.simpleicons.org/nodedotjs/5FA04E" height="28" alt="Node.js"> <sub>Node.js</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/php/777BB4" height="28" alt="PHP"> <sub>PHP</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/laravel/FF2D20" height="28" alt="Laravel"> <sub>Laravel</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/python/3776AB" height="28" alt="Python"> <sub>Python</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/flask/FFFFFF" height="28" alt="Flask"> <sub>Flask</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/openjdk/E76F00" height="28" alt="Java"> <sub>Java</sub>
+</p>
 
-My work isn't limited to simple demo websites. I focus on building practical systems that solve real organizational and community problems: account management, dashboards, workflows, communication features, document processing, appointment scheduling, order tracking, AI assistance, and real-time updates.
+### Data and Cloud Services
 
+<p>
+  <img src="https://cdn.simpleicons.org/postgresql/4169E1" height="28" alt="PostgreSQL"> <sub>PostgreSQL</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/mysql/4479A1" height="28" alt="MySQL"> <sub>MySQL</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/supabase/3FCF8E" height="28" alt="Supabase"> <sub>Supabase</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/firebase/FFCA28" height="28" alt="Firebase"> <sub>Firebase</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/cloudinary/3448C5" height="28" alt="Cloudinary"> <sub>Cloudinary</sub> &nbsp;
+  <img src="assets/icons/aws.svg" height="28" alt="AWS"> <sub>AWS</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/cloudflare/F38020" height="28" alt="Cloudflare"> <sub>Cloudflare</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/vercel/FFFFFF" height="28" alt="Vercel"> <sub>Vercel</sub>
+</p>
 
+### Mobile, Development, and Testing
 
-Areas of hands-on experience:
+<p>
+  <img src="https://cdn.simpleicons.org/flutter/54C5F8" height="28" alt="Flutter"> <sub>Flutter</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/dart/0175C2" height="28" alt="Dart"> <sub>Dart</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/androidstudio/3DDC84" height="28" alt="Android Studio"> <sub>Android Studio</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/docker/2496ED" height="28" alt="Docker"> <sub>Docker</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/git/F05032" height="28" alt="Git"> <sub>Git</sub> &nbsp;
+  <img src="https://cdn.simpleicons.org/github/FFFFFF" height="28" alt="GitHub"> <sub>GitHub</sub> &nbsp;
+  <img src="assets/icons/vscode.svg" height="28" alt="VS Code"> <sub>VS Code</sub> &nbsp;
+  <img src="assets/icons/playwright.svg" height="28" alt="Playwright"> <sub>Playwright</sub>
+</p>
 
+## Selected Projects
 
+### Santa Cruz Connect
 
-\- User interface development
+**Civic engagement · Web and mobile**
 
-\- Backend programming
+A community platform for local announcements, resident concerns, service requests, status tracking, and emergency reporting, with an AI assistant called **Kuya Pedro AI**.
 
-\- Database management
+### Smile & Co Dental Clinic Management System
 
-\- Authentication and access control
+**Healthcare operations · Web application**
 
-\- AI chatbot integration
+A clinic-management concept covering appointment booking, patient records, treatment tracking, staff scheduling, and an AI-assisted inquiry flow.
 
-\- Responsive web and mobile app design
+### Veyron E-Commerce Platform
 
-\- Deployment
+**Marketplace · Web and mobile**
 
-\- Project documentation and version control
+A multi-role marketplace concept for buyers, sellers, and administrators, with product discovery, order tracking, chat, notifications, sales summaries, and receipts.
 
-\- Administrative dashboards
+### Poblacion II Barangay Management System
 
+**Government services · Web application**
 
+A document-request and resident-management system with application tracking, approval workflows, standardized document generation, role-based access, and audit trails.
 
-\---
+## Certifications
 
+- AI Awareness — ASEAN Foundation
+- Data Analytics Essentials — Cisco Networking Academy
+- Python Essentials — Cisco Networking Academy
+- IT Essential Skills — Village 88
+- Navigating Digital Risk — PICPA Batangas
+- IT Environment, the IT Profession and World of Compliance — PHINMA
 
+## Currently Learning
 
-\## Career Goals
+I’m strengthening my foundations in **cybersecurity**, **data analytics**, and **software architecture**. I’m especially interested in applying secure development practices to systems that handle personal records, transactions, and community services.
 
+## Contact
 
+<p align="center">
+  <a href="https://www.linkedin.com/in/lmacovera/" title="LinkedIn"><img src="assets/icons/linkedin.svg" width="30" height="30" alt="LinkedIn"></a>
+  &nbsp;&nbsp;
+  <a href="mailto:lemfulgencio@gmail.com" title="Gmail"><img src="assets/icons/gmail.svg" width="30" height="30" alt="Gmail"></a>
+  &nbsp;&nbsp;
+  <a href="https://lemfulgencio.pages.dev" title="Portfolio"><img src="assets/icons/globe.svg" width="30" height="30" alt="Portfolio"></a>
+</p>
 
-My career goal is to continuously learn, explore new technologies, and improve my abilities as a developer. I want to expand beyond my current full stack development experience by gaining deeper knowledge in \*\*cybersecurity\*\*, \*\*data analytics\*\*, \*\*software architecture\*\*, and modern development practices.
-
-
-
-I'm not looking to limit myself to one language or field. I want to keep improving as a full stack developer while exploring AI, security, and analytics to build systems that are not only functional, but also safer and smarter — and I'm open to challenging projects that let me solve real problems, work with different technologies, and grow both technically and professionally.
-
-
-
-\---
-
-
-
-\## Current Skills
-
-
-
-\*\*Frontend Development\*\*
-
-
-
-!\[HTML5](https://img.shields.io/badge/HTML5-111927?style=flat-square\&logo=html5\&logoColor=E34F26\&labelColor=080D16)
-
-!\[CSS3](https://img.shields.io/badge/CSS3-111927?style=flat-square\&logo=css3\&logoColor=1572B6\&labelColor=080D16)
-
-!\[JavaScript](https://img.shields.io/badge/JavaScript-111927?style=flat-square\&logo=javascript\&logoColor=F7DF1E\&labelColor=080D16)
-
-!\[TypeScript](https://img.shields.io/badge/TypeScript-111927?style=flat-square\&logo=typescript\&logoColor=3178C6\&labelColor=080D16)
-
-!\[React](https://img.shields.io/badge/React-111927?style=flat-square\&logo=react\&logoColor=61DAFB\&labelColor=080D16)
-
-!\[Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-111927?style=flat-square\&logo=tailwindcss\&logoColor=38BDF8\&labelColor=080D16)
-
-!\[Bootstrap](https://img.shields.io/badge/Bootstrap-111927?style=flat-square\&logo=bootstrap\&logoColor=7952B3\&labelColor=080D16)
-
-
-
-\*\*Backend Development\*\*
-
-
-
-!\[PHP](https://img.shields.io/badge/PHP-111927?style=flat-square\&logo=php\&logoColor=777BB4\&labelColor=080D16)
-
-!\[Laravel](https://img.shields.io/badge/Laravel-111927?style=flat-square\&logo=laravel\&logoColor=FF2D20\&labelColor=080D16)
-
-!\[Python](https://img.shields.io/badge/Python-111927?style=flat-square\&logo=python\&logoColor=3776AB\&labelColor=080D16)
-
-!\[Flask](https://img.shields.io/badge/Flask-111927?style=flat-square\&logo=flask\&logoColor=FFFFFF\&labelColor=080D16)
-
-!\[Node.js](https://img.shields.io/badge/Node.js-111927?style=flat-square\&logo=node.js\&logoColor=339933\&labelColor=080D16)
-
-!\[Java](https://img.shields.io/badge/Java-111927?style=flat-square\&logo=openjdk\&logoColor=E76F00\&labelColor=080D16)
-
-
-
-\*\*Mobile and Cross-Platform Development\*\*
-
-
-
-!\[Flutter](https://img.shields.io/badge/Flutter-111927?style=flat-square\&logo=flutter\&logoColor=02569B\&labelColor=080D16)
-
-!\[Dart](https://img.shields.io/badge/Dart-111927?style=flat-square\&logo=dart\&logoColor=0175C2\&labelColor=080D16)
-
-!\[Android Studio](https://img.shields.io/badge/Android%20Studio-111927?style=flat-square\&logo=androidstudio\&logoColor=3DDC84\&labelColor=080D16)
-
-
-
-\*\*Databases and Cloud Services\*\*
-
-
-
-!\[MySQL](https://img.shields.io/badge/MySQL-111927?style=flat-square\&logo=mysql\&logoColor=4479A1\&labelColor=080D16)
-
-!\[PostgreSQL](https://img.shields.io/badge/PostgreSQL-111927?style=flat-square\&logo=postgresql\&logoColor=4169E1\&labelColor=080D16)
-
-!\[Firebase](https://img.shields.io/badge/Firebase-111927?style=flat-square\&logo=firebase\&logoColor=FFCA28\&labelColor=080D16)
-
-
-
-\*\*Development and Deployment Tools\*\*
-
-
-
-!\[Git](https://img.shields.io/badge/Git-111927?style=flat-square\&logo=git\&logoColor=F05032\&labelColor=080D16)
-
-!\[GitHub](https://img.shields.io/badge/GitHub-111927?style=flat-square\&logo=github\&logoColor=FFFFFF\&labelColor=080D16)
-
-!\[VS Code](https://img.shields.io/badge/VS%20Code-111927?style=flat-square\&logo=visualstudiocode\&logoColor=007ACC\&labelColor=080D16)
-
-!\[Vercel](https://img.shields.io/badge/Vercel-111927?style=flat-square\&logo=vercel\&logoColor=FFFFFF\&labelColor=080D16)
-
-
-
-\---
-
-
-
-\## Technologies I Want to Learn
-
-
-
-\*\*Cybersecurity\*\* — to strengthen my ability to build safer systems, since many of my current projects manage personal records, government information, appointments, transactions, and user accounts.
-
-
-
-!\[Network Security](https://img.shields.io/badge/Network%20Security-0D1525?style=flat-square\&labelColor=080D16)
-
-!\[Web App Security](https://img.shields.io/badge/Web%20App%20Security-0D1525?style=flat-square\&labelColor=080D16)
-
-!\[Secure Coding](https://img.shields.io/badge/Secure%20Coding-0D1525?style=flat-square\&labelColor=080D16)
-
-!\[OWASP Top 10](https://img.shields.io/badge/OWASP%20Top%2010-0D1525?style=flat-square\&labelColor=080D16)
-
-!\[Encryption](https://img.shields.io/badge/Encryption-0D1525?style=flat-square\&labelColor=080D16)
-
-!\[Penetration Testing](https://img.shields.io/badge/Penetration%20Testing-0D1525?style=flat-square\&labelColor=080D16)
-
-!\[Cloud Security](https://img.shields.io/badge/Cloud%20Security-0D1525?style=flat-square\&labelColor=080D16)
-
-!\[Incident Response](https://img.shields.io/badge/Incident%20Response-0D1525?style=flat-square\&labelColor=080D16)
-
-
-
-\*\*Data Analytics\*\* — to turn the data already generated by my systems (citizen reports, appointments, sales, order activity, document requests) into meaningful insights and decisions.
-
-
-
-!\[SQL](https://img.shields.io/badge/SQL-0D1525?style=flat-square\&labelColor=080D16)
-
-!\[Pandas](https://img.shields.io/badge/Pandas-0D1525?style=flat-square\&labelColor=080D16)
-
-!\[NumPy](https://img.shields.io/badge/NumPy-0D1525?style=flat-square\&labelColor=080D16)
-
-!\[Matplotlib](https://img.shields.io/badge/Matplotlib-0D1525?style=flat-square\&labelColor=080D16)
-
-!\[Power BI](https://img.shields.io/badge/Power%20BI-0D1525?style=flat-square\&labelColor=080D16)
-
-!\[Tableau](https://img.shields.io/badge/Tableau-0D1525?style=flat-square\&labelColor=080D16)
-
-!\[Business Intelligence](https://img.shields.io/badge/Business%20Intelligence-0D1525?style=flat-square\&labelColor=080D16)
-
-!\[Predictive Analytics](https://img.shields.io/badge/Predictive%20Analytics-0D1525?style=flat-square\&labelColor=080D16)
-
-
-
-\---
-
-
-
-\## Certifications
-
-
-
-| Certificate | Issuer |
-
-|---|---|
-
-| AI Awareness | ASEAN Foundation |
-
-| Data Analytics Essentials | Cisco |
-
-| Python Essentials | Cisco |
-
-| IT Essential Skills | Village 88 |
-
-| Navigating Digital Risk | PICPA Batangas |
-
-| IT Environment, the IT Profession and Workplace \*(full title pending)\* | — |
-
-
-
-\---
-
-
-
-\## Academic Projects
-
-
-
-\### Santa Cruz Connect
-
-\*Government and civic engagement platform — Web and Mobile\*
-
-
-
-A platform designed to improve communication and collaboration between residents and the local government of Santa Cruz, Laguna. Residents can report concerns, submit and track service requests, view announcements and ordinances, report emergencies, and get help from an AI assistant called Kuya Pedro AI.
-
-
-
-`React` `Laravel` `MySQL` `Flutter` `AI Integration`
-
-
-
-\---
-
-
-
-\### Smile \& Co Dental Clinic Management System
-
-\*Healthcare and clinic management — Web Application\*
-
-
-
-A system built to organize clinic operations and improve the patient experience: online appointment booking with calendar integration, patient record management, treatment tracking, staff scheduling, and an AI chatbot for patient inquiries.
-
-
-
-`PHP` `Laravel` `MySQL` `AI Chatbot` `Role-Based Access`
-
-
-
-\---
-
-
-
-\### Veyron E-Commerce Platform
-
-\*Multi-user e-commerce system — Web and Mobile\*
-
-
-
-A cross-platform marketplace for buyers, sellers, and admins featuring product catalogs, smart filtering, order tracking, live buyer-seller chat, an AI chatbot, AI-generated sales summaries, OTP verification, and automated notifications.
-
-
-
-`React` `Node.js` `Firebase` `Flutter` `AI Integration`
-
-
-
-\---
-
-
-
-\### Poblacion II Barangay Management System
-
-\*Government document and resident management — Web Application\*
-
-
-
-A system that digitizes the processing and issuance of official barangay documents: online document requests, application status tracking, verification and approval workflows, standardized document generation, and audit trails.
-
-
-
-`PHP` `Laravel` `MySQL` `Role-Based Workflows`
-
-
-
-\---
-
-
-
-\## Contact Information
-
-
-
-| | |
-
-|---|---|
-
-| Email | lmacovera@gmail.com |
-
-| LinkedIn | linkedin.com/in/lmacovera |
-
-| GitHub | github.com/1nonlylemm |
-
-
+---
 
 <div align="center">
 
-
-
-Open to challenging projects and opportunities to learn.
-
-
+Open to thoughtful collaborations, freelance projects, and opportunities to keep growing.
 
 </div>
-
