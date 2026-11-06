@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="Luis Mario Acovera · Full Stack Developer · Design, Develop, Deploy · 2+ years · 15+ projects · 100+ users served" width="100%">
+<img src="assets/banner.svg" alt="Luis Mario Acovera · Full Stack Developer · 2+ years building · 15+ projects · 100+ users served. Animated Bytebug Battle arena: Lem walks around carrying a blushing Dark Boulder while 14 Bytebugs wander, bump into each other and react with random emotions." width="100%">
 
 </div>
 
