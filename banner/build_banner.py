@@ -18,7 +18,7 @@ into CSS keyframes. It loops seamlessly: the order of carried Bytebugs is chosen
 so everyone ends up back where they started.
 
 data.json holds the sprite frames rendered from the portfolio's Bytebug Battle.
-heading.json holds the portfolio's Geist lettering as SVG outlines.
+heading.json holds the Geist and Instrument Serif lettering as SVG outlines.
 """
 from base64 import b64encode
 import json, os, random, sys
@@ -32,9 +32,13 @@ rng = random.Random(sys.argv[1] if len(sys.argv) > 1 else None)
 
 W, H = 1000, 540
 HORIZON = 238
-HERO_HEIGHT = 360
+HERO_HEIGHT = 392
 ARENA_OFFSET = HERO_HEIGHT - HORIZON
 BANNER_HEIGHT = H + ARENA_OFFSET
+HANDS_WIDTH = 928
+HANDS_X = (W - HANDS_WIDTH) // 2
+HANDS_Y = 64
+HANDS_SPLIT = HANDS_X + HANDS_WIDTH * 627 / 1280  # Transparent gap in the original PNG.
 BACK, MID, FRONT = 300, 392, 506            # ground lines of the three lanes
 
 
@@ -583,19 +587,27 @@ def impact_flashes():
     return out
 
 
-def heading():
+def hand_defs():
     hands = b64encode(Path(HERE, 'art', 'creation-relief.png').read_bytes()).decode('ascii')
-    # The portfolio asset is 1280 by 400. Keep its aspect ratio and use the same side fade.
-    art_width = 944
-    out = []
-    out.append(f'<image x="{(W - art_width) // 2}" y="39" width="{art_width}" height="{num(art_width * 5 / 16)}" '
-               f'mask="url(#hands-edge)" href="data:image/png;base64,{hands}"/>')
-    for key, y, fill in [('tagline', 46, '#c6c6c6'), ('name', 139, '#f2f2f2'),
-                         ('role', 321, '#f2f2f2'), ('stats', 347, '#c6c6c6')]:
+    return [
+        f'<image id="hands-relief" x="{HANDS_X}" y="{HANDS_Y}" width="{HANDS_WIDTH}" '
+        f'height="{num(HANDS_WIDTH * 5 / 16)}" mask="url(#hands-edge)" href="data:image/png;base64,{hands}"/>',
+        f'<clipPath id="hands-left"><rect width="{num(HANDS_SPLIT)}" height="{HERO_HEIGHT}"/></clipPath>',
+        f'<clipPath id="hands-right"><rect x="{num(HANDS_SPLIT)}" width="{num(W - HANDS_SPLIT)}" '
+        f'height="{HERO_HEIGHT}"/></clipPath>',
+    ]
+
+
+def heading():
+    out = [
+        '<g class="hand-left"><use href="#hands-relief" clip-path="url(#hands-left)"/></g>',
+        '<g class="hand-right"><use href="#hands-relief" clip-path="url(#hands-right)"/></g>',
+    ]
+    for key, y, fill in [('tagline', 40, '#c6c6c6'), ('name', 129, '#f2f2f2'),
+                         ('role', 354, '#f2f2f2'), ('stats', 378, '#c6c6c6')]:
         line = HEADING[key]
-        x = num((W - line['width']) / 2)
-        outline = ' stroke="#0a0a0a" stroke-width="5" stroke-linejoin="round" paint-order="stroke fill"' if key == 'name' else ''
-        out.append(f'<path transform="translate({x} {y})" fill="{fill}"{outline} d="{line["path"]}"/>')
+        x = num(W / 2 - line['center'])
+        out.append(f'<path id="banner-{key}" transform="translate({x} {y})" fill="{fill}" d="{line["path"]}"/>')
     return out
 
 
@@ -633,6 +645,11 @@ style = (
     '.bob{animation:bob .36s steps(1,end) infinite}@keyframes bob{0%{transform:translate(0,0)}50%{transform:translate(0,-2px)}}'
     '.wig{animation:wig 1.6s ease-in-out infinite}@keyframes wig{0%,100%{transform:rotate(-3deg)}50%{transform:translate(0,-1px) rotate(3deg)}}'
     + ''.join(css)
+    # The wrists drift apart and then back toward the original pose.
+    + '.hand-left{animation:hand-left-idle 8s ease-in-out infinite}'
+    + '.hand-right{animation:hand-right-idle 8s ease-in-out infinite}'
+    + '@keyframes hand-left-idle{0%,100%{transform:translate(0,0)}50%{transform:translate(-9px,-4px)}}'
+    + '@keyframes hand-right-idle{0%,100%{transform:translate(0,0)}50%{transform:translate(9px,3px)}}'
     + '@media(prefers-reduced-motion:reduce){*{animation-play-state:paused!important}}')
 
 svg = [
@@ -646,6 +663,7 @@ svg = [
     '<linearGradient id="hands-fade"><stop stop-color="#fff" stop-opacity="0"/><stop offset=".08" stop-color="#fff"/>'
     '<stop offset=".92" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>',
     '<mask id="hands-edge" maskContentUnits="objectBoundingBox"><rect width="1" height="1" fill="url(#hands-fade)"/></mask>',
+    *hand_defs(),
     '<radialGradient id="shadow"><stop stop-color="#000" stop-opacity=".5"/><stop offset=".6" stop-color="#000" stop-opacity=".3"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>',
     f'<clipPath id="below"><rect y="{HORIZON}" width="{W}" height="{H - HORIZON}"/></clipPath>',
     *defs,
