@@ -603,7 +603,7 @@ def heading():
         '<g class="hand-left"><use href="#hands-relief" clip-path="url(#hands-left)"/></g>',
         '<g class="hand-right"><use href="#hands-relief" clip-path="url(#hands-right)"/></g>',
     ]
-    for key, y, fill in [('tagline', 40, '#c6c6c6'), ('name', 129, '#f2f2f2'),
+    for key, y, fill in [('tagline', 35, '#c6c6c6'), ('name', 140, '#f2f2f2'),
                          ('role', 354, '#f2f2f2'), ('stats', 378, '#c6c6c6')]:
         line = HEADING[key]
         x = num(W / 2 - line['center'])
