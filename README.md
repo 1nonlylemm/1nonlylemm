@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://lemfulgencio.pages.dev/"><img src="assets/banner.svg?v=portfolio" alt="Visit Lem Fulgencio’s portfolio. Full Stack Developer · Design, Develop, Deploy · 2+ years building · 15+ projects · 100+ users served. The dotted hands from Creation of Adam sit above an animated Bytebug arena." width="100%"></a>
+<a href="https://lemfulgencio.pages.dev/"><img src="https://raw.githubusercontent.com/1nonlylemm/1nonlylemm/refs/heads/main/assets/banner.svg" alt="Visit Lem Fulgencio’s portfolio. Full Stack Developer · Design, Develop, Deploy · 2+ years building · 15+ projects · 100+ users served. The dotted hands from Creation of Adam sit above an animated Bytebug arena." width="100%"></a>
 
 </div>
 
