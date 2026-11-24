@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="Luis Mario Acovera · Full Stack Developer · 2+ years building · 15+ projects · 100+ users served. Animated Bytebug Battle arena: Lem walks around carrying a blushing Bytebug while the others wander, bump into each other and react with random emotions. Every 15 seconds one of them begs Lem to carry it instead." width="100%">
+<a href="https://lemfulgencio.pages.dev/"><img src="assets/banner.svg?v=portfolio" alt="Visit Lem Fulgencio’s portfolio. Full Stack Developer · Design, Develop, Deploy · 2+ years building · 15+ projects · 100+ users served. The dotted hands from Creation of Adam sit above an animated Bytebug arena." width="100%"></a>
 
 </div>
 

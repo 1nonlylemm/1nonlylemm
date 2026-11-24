@@ -17,18 +17,24 @@ A README image can't run code, so the whole story is planned here and baked
 into CSS keyframes. It loops seamlessly: the order of carried Bytebugs is chosen
 so everyone ends up back where they started.
 
-data.json holds the sprite frames (rendered from the portfolio's Bytebug Battle
-canvas code) and the Syne / DM Sans text already converted to outlines.
+data.json holds the sprite frames rendered from the portfolio's Bytebug Battle.
+heading.json holds the portfolio's Geist lettering as SVG outlines.
 """
+from base64 import b64encode
 import json, os, random, sys
+from pathlib import Path
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, '..', 'assets', 'banner.svg')
 D = json.load(open(os.path.join(HERE, 'data.json'), encoding='utf8'))
+HEADING = json.loads(Path(HERE, 'heading.json').read_text(encoding='utf8'))
 rng = random.Random(sys.argv[1] if len(sys.argv) > 1 else None)
 
 W, H = 1000, 540
 HORIZON = 238
+HERO_HEIGHT = 360
+ARENA_OFFSET = HERO_HEIGHT - HORIZON
+BANNER_HEIGHT = H + ARENA_OFFSET
 BACK, MID, FRONT = 300, 392, 506            # ground lines of the three lanes
 
 
@@ -577,35 +583,19 @@ def impact_flashes():
     return out
 
 
-def text(key, x, y, fill):
-    t = D['text'][key]
-    return f'<path transform="translate({num(x)} {y})" fill="{fill}" d="{t["d"]}"/>', t['w']
-
-
 def heading():
-    T_ = D['text']
+    hands = b64encode(Path(HERE, 'art', 'creation-relief.png').read_bytes()).decode('ascii')
+    # The portfolio asset is 1280 by 400. Keep its aspect ratio and use the same side fade.
+    art_width = 944
     out = []
-    words, gap = ['k_design', 'k_develop', 'k_deploy'], 26
-    x = 500 - (sum(T_[w]['w'] for w in words) + gap * 2) / 2
-    for i, w in enumerate(words):
-        p, wd = text(w, x, 46, '#8f97a8')
-        out.append(p)
-        x += wd
-        if i < 2:
-            out.append(f'<path d="M{num(x + gap / 2)} 36l3 3-3 3-3-3z" fill="#5d6576"/>')
-            x += gap
-    out.append(text('name', 500 - T_['name']['w'] / 2, 124, '#f4f1ea')[0])
-    out.append(text('role', 500 - T_['role']['w'] / 2, 166, 'url(#silver)')[0])
-    stats, sp, sep = [('n1', 'l1'), ('n2', 'l2'), ('n3', 'l3')], 8, 34
-    x = 500 - (sum(T_[n]['w'] + sp + T_[l]['w'] for n, l in stats) + sep * 2) / 2
-    for i, (n, l) in enumerate(stats):
-        out.append(text(n, x, 210, '#f2c46d')[0])
-        x += T_[n]['w'] + sp
-        out.append(text(l, x, 210, '#aab1bf')[0])
-        x += T_[l]['w']
-        if i < 2:
-            out.append(f'<rect x="{num(x + sep / 2 - 2)}" y="201" width="4" height="4" fill="#5d6576"/>')
-            x += sep
+    out.append(f'<image x="{(W - art_width) // 2}" y="39" width="{art_width}" height="{num(art_width * 5 / 16)}" '
+               f'mask="url(#hands-edge)" href="data:image/png;base64,{hands}"/>')
+    for key, y, fill in [('tagline', 46, '#c6c6c6'), ('name', 139, '#f2f2f2'),
+                         ('role', 321, '#f2f2f2'), ('stats', 347, '#c6c6c6')]:
+        line = HEADING[key]
+        x = num((W - line['width']) / 2)
+        outline = ' stroke="#0a0a0a" stroke-width="5" stroke-linejoin="round" paint-order="stroke fill"' if key == 'name' else ''
+        out.append(f'<path transform="translate({x} {y})" fill="{fill}"{outline} d="{line["path"]}"/>')
     return out
 
 
@@ -616,12 +606,8 @@ def floor():
         d.append(f'M0 {num(y)}H{W}')
         y += step
         step *= 1.3
-    return [f'<rect width="{W}" height="{H}" fill="url(#wall)"/>',
-            f'<rect width="{W}" height="{HORIZON}" fill="url(#dots)" opacity=".7"/>',
-            f'<rect y="{HORIZON}" width="{W}" height="{H - HORIZON}" fill="url(#ground)"/>',
-            f'<path d="{"".join(d)}" stroke="#3d414c" fill="none" clip-path="url(#below)"/>',
-            f'<rect y="{HORIZON}" width="{W}" height="2" fill="#4c515e" opacity=".7"/>',
-            f'<rect width="{W}" height="{H}" fill="url(#spot)"/>']
+    return [f'<rect y="{HORIZON}" width="{W}" height="{H - HORIZON}" fill="#101010"/>',
+            f'<path d="{"".join(d)}" stroke="#2f2f2f" fill="none" clip-path="url(#below)"/>']
 
 
 for key in list(ICONS) + list(TEXTS):
@@ -646,30 +632,30 @@ style = (
     '.l0{animation-name:w0}.l1{animation-name:w1}.l2{animation-name:w2}.l3{animation-name:w3}'
     '.bob{animation:bob .36s steps(1,end) infinite}@keyframes bob{0%{transform:translate(0,0)}50%{transform:translate(0,-2px)}}'
     '.wig{animation:wig 1.6s ease-in-out infinite}@keyframes wig{0%,100%{transform:rotate(-3deg)}50%{transform:translate(0,-1px) rotate(3deg)}}'
-    + ''.join(css))
+    + ''.join(css)
+    + '@media(prefers-reduced-motion:reduce){*{animation-play-state:paused!important}}')
 
 svg = [
-    f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="title desc">',
-    '<title id="title">Luis Mario Acovera — Full Stack Developer</title>',
-    '<desc id="desc">Luis Mario Acovera, Full Stack Developer. In the Bytebug Battle arena below, Lem walks around carrying a '
+    f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{BANNER_HEIGHT}" viewBox="0 0 {W} {BANNER_HEIGHT}" role="img" aria-labelledby="title desc">',
+    '<title id="title">Lem Fulgencio — Full Stack Developer</title>',
+    '<desc id="desc">Design, Develop, Deploy. The dotted hands from Creation of Adam frame the name. In the Bytebug Battle arena below, Lem walks around carrying a '
     'blushing Bytebug. The other Bytebugs wander, bump into each other and react with random emotions, and every 15 seconds '
     'one of them begs Lem to carry it instead.</desc>',
     f'<style>{style}</style>',
     '<defs>',
-    '<linearGradient id="wall" x2="0" y2="1"><stop stop-color="#0f1015"/><stop offset=".44" stop-color="#171920"/><stop offset="1" stop-color="#262932"/></linearGradient>',
-    '<linearGradient id="ground" x2="0" y2="1"><stop stop-color="#1b1d24"/><stop offset="1" stop-color="#2a2d36"/></linearGradient>',
-    '<linearGradient id="silver" x2="0" y2="1"><stop stop-color="#f1f3f6"/><stop offset=".55" stop-color="#c3c8d0"/><stop offset="1" stop-color="#9aa1ac"/></linearGradient>',
-    '<pattern id="dots" x="14" y="18" width="21" height="21" patternUnits="userSpaceOnUse"><rect width="1.2" height="1.2" fill="#666b78"/></pattern>',
-    f'<radialGradient id="spot" cx="500" cy="{FRONT}" r="300" gradientTransform="translate(0 {FRONT}) scale(1 .45) translate(0 -{FRONT})" gradientUnits="userSpaceOnUse"><stop stop-color="#b8d5ef" stop-opacity=".12"/><stop offset="1" stop-color="#b8d5ef" stop-opacity="0"/></radialGradient>',
+    '<linearGradient id="hands-fade"><stop stop-color="#fff" stop-opacity="0"/><stop offset=".08" stop-color="#fff"/>'
+    '<stop offset=".92" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>',
+    '<mask id="hands-edge" maskContentUnits="objectBoundingBox"><rect width="1" height="1" fill="url(#hands-fade)"/></mask>',
     '<radialGradient id="shadow"><stop stop-color="#000" stop-opacity=".5"/><stop offset=".6" stop-color="#000" stop-opacity=".3"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>',
     f'<clipPath id="below"><rect y="{HORIZON}" width="{W}" height="{H - HORIZON}"/></clipPath>',
-    f'<clipPath id="edge"><rect width="{W}" height="{H}" rx="16"/></clipPath>',
     *defs,
     '</defs>',
-    '<g clip-path="url(#edge)">',
-    *floor(), *head, *scene,
+    f'<rect width="{W}" height="{BANNER_HEIGHT}" fill="#0a0a0a"/>',
+    *head,
+    f'<g transform="translate(0 {ARENA_OFFSET})">',
+    *floor(), *scene,
     '</g>',
-    f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="15.5" fill="none" stroke="#353945"/>',
+    f'<rect x=".5" y=".5" width="{W - 1}" height="{BANNER_HEIGHT - 1}" fill="none" stroke="#333333"/>',
     '</svg>',
 ]
 open(OUT, 'w', encoding='utf8').write('\n'.join(svg))
